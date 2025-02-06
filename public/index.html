@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webpack installation</title>
+    <title>Todo List</title>
 </head>
 <body>
-    <div id="app"></div>
+    <div class="container">
+        <div class="todo-container">
+            <div class="todo-header">
+                <h1>Today's To Do</h1>
+                <button class="refresh-btn">↻</button>
+            </div>
+            <div class="todo-input-container">
+                <form action="">
+                    <input type="text" placeholder="Add to your list..." class="todo-input">
+                    <button class="add-btn">↵</button>
+                </form>
+            </div>
+            <ul id="todo-list"></ul>
+            <button class="clear-btn">Clear all completed</button>
+        </div>
+    </div>
 </body>
 </html>
