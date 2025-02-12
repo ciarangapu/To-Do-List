@@ -1,9 +1,11 @@
-// Local storage module
-export const getTasks = () => {
-    const tasks = localStorage.getItem('tasks');
-    return tasks ? JSON.parse(tasks) : [];
-  };
-  
-  export const saveTasks = (tasks) => {
+const storage = {
+  saveTasks(tasks) {
     localStorage.setItem('tasks', JSON.stringify(tasks));
-  };
+  },
+  loadTasks() {
+    const storedTasks = localStorage.getItem('tasks');
+    return storedTasks ? JSON.parse(storedTasks) : [];
+  },
+};
+
+export default storage;
