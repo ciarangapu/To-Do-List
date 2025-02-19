@@ -11,7 +11,7 @@ class TaskManager {
   createTaskElement(task) {
     const li = document.createElement('li');
     li.setAttribute('draggable', 'true');
-    li.addEventListener('click', this.saveTasks);
+    li.addEventListener('click', this.storage);
     li.innerHTML = `
       <input type="checkbox" class="task-checkbox" ${task.completed ? 'checked' : ''}>
       <span class="task-text" contenteditable="false">${task.text}</span>
